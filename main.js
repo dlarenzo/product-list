@@ -7,6 +7,7 @@ function addProduct() {
   // You need to change the id that this collects to product.
   let input = document.getElementById("input").value;
   // You will need to create a div using javascript,
+  let div = document
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
 
   // Once you create create a div,
