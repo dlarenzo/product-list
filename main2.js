@@ -1,22 +1,36 @@
 // NOTE: PLEASE READ EACH INSTRUCTION COMMENT CAREFULLY TO HELP YOU PROCESS THIS PROJECT
 // IF YOU ARE STUCK ASK AN INSTRUCTOR FOR HELP, ALWAYS WRITE THE CODE BELOW THE ASSIGNMENTS.
 
+const myForm = document.querySelector('#my-form');
+const input = document.getElementById("product");
+const output = document.getElementById("output");
+const div = document.createElement("div");
+
 productArray = [];
 
-
+myForm.addEventListener('submit', addProduct)
 
 
 function addProduct() {
+  
+  output.style.display='block';
+  if(input.value === '') {
+    alert('You must enter a Product Name');
+  } else {
+    
+    div.innerHTML = input.value;
+    output.appendChild(div);
+    input.value= '';
+    return false;
+  }
   // Assignment 1
   // You need to change the id that this collects to product.
   
-  let input = document.getElementById("product");
+  
   
   // You will need to create a div using javascript,
 
-  let output = document.getElementById("output");
   
-  let div = document.createElement("div");
   
   
 
@@ -28,7 +42,7 @@ function addProduct() {
 
   
   
-  output.style.display='block';
+ 
  
   
 
@@ -42,20 +56,7 @@ function addProduct() {
   // If you do not know the alert method, look it up on google using the w3schools,
   // do not forget to include a return false at the end to not reload your webpage.
 
-  if(input.value === '') {
-    alert("You must enter a Product Name");
-
-
-  } else {
-    
-    div.innerHTML = input.value;
-    output.appendChild(div);
-    return false;
-    
-  }
   
-  
-  document.getElementById('input').value='';
 
   // Assignment 2:
   // You need to put the value of the input into an array to call later.

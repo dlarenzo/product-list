@@ -1,10 +1,10 @@
 // NOTE: PLEASE READ EACH INSTRUCTION COMMENT CAREFULLY TO HELP YOU PROCESS THIS PROJECT
 // IF YOU ARE STUCK ASK AN INSTRUCTOR FOR HELP, ALWAYS WRITE THE CODE BELOW THE ASSIGNMENTS.
-
+const myForm = document.querySelector('#my-form');
 productArray = [];
 
 
-
+/*myForm.addEventListener('submit', addProduct)*/
 
 function addProduct() {
   // Assignment 1
@@ -28,8 +28,8 @@ function addProduct() {
 
   
   
-  output.style.display='block';
- 
+  
+  
   
 
 
@@ -47,15 +47,16 @@ function addProduct() {
 
 
   } else {
-    
+    output.style.display='block';
     div.innerHTML = input.value;
     output.appendChild(div);
+    input.value= '';
     return false;
     
   }
   
   
-  document.getElementById('input').value='';
+  
 
   // Assignment 2:
   // You need to put the value of the input into an array to call later.
